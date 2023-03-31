@@ -1,0 +1,88 @@
+/* Genel Stil */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Başlık Stil */
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+header #logo {
+  color: #fff;
+  text-decoration: none;
+}
+
+header #menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header #menu li {
+  margin-left: 1rem;
+}
+
+header #menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Ana İçerik Stil */
+main {
+  padding: 1rem;
+}
+
+/* Altbilgi Stil */
+footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #999;
+}
+
+/* Altbilgi Logoları */
+footer #linkedin-logo {
+  background-image: url(https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+footer #github-logo {
+  background-image: url(https://cdn2.iconfinder.com/data/icons/social-icons-circular-color/512/github-512.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+footer #email-logo {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/281/281769.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
