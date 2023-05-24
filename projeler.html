@@ -30,7 +30,13 @@
         </p>
 
 
-        
+            <div id="colorSquareContainer">
+            <div id="colorSquare1" class="colorSquare" onclick="changeTheme('#000000')" 
+              onmouseover="highlightSquare(this)" onmouseout="resetSquare(this)"></div>
+            <div id="colorSquare2" class="colorSquare" onclick="changeTheme('#ff0000')" 
+              onmouseover="highlightSquare(this)" onmouseout="resetSquare(this)"></div>
+            <div id="colorSquare3" class="colorSquare" onclick="changeTheme('#00ff00')" 
+              onmouseover="highlightSquare(this)" onmouseout="resetSquare(this)"></div>
     </main>
     <footer>
         <a
@@ -41,5 +47,23 @@
         <a href="mailto:berketoksoz1@gmail.com" id="email-logo"></a>
       </footer>
   
+      <script>
+        // Header ve Footer elementlerini seçelim
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+  
+        // Karelerin tıklanma olayını dinleyelim
+        const colorSquares = document.querySelectorAll('.colorSquare');
+        colorSquares.forEach(square => {
+          square.addEventListener('click', function() {
+          // Seçilen karenin arka plan rengini alalım
+          const color = window.getComputedStyle(this).getPropertyValue('background-color');
+  
+          // Header ve Footer'ın arka plan rengini değiştirelim
+          header.style.backgroundColor = color;
+          footer.style.backgroundColor = color;
+          });
+        });
+      </script>
 </body>
 </html>

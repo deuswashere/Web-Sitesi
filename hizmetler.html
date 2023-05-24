@@ -21,9 +21,23 @@
 	</div>
     </header>
     <main>
-        <p>
-            Web Sitesi yapımı, Web siteleri için sızma testi, Python, Javascript ve Java dilinde program yazma gibi talepleriniz varsa aşağıdaki linklerden bana ulaşabilirsiniz.
-        </p>
+            <p>
+            &nbsp;Merhaba! Ben Berke Toksöz, Bandırma Onyedi Eylül Üniversitesi'nde Bilgisayar Mühendisliği öğrencisiyim. Programlama dünyasına olan ilgim ve bilgi birikimim sayesinde, Java, Python ve Javascript gibi popüler programlama dillerinde yetenekliyim. Aynı zamanda, web geliştirme konusunda da deneyimliyim ve modern web teknolojileriyle etkileyici web siteleri oluşturabilirim.
+            </p><p>
+            &nbsp;Web sitelerinin güvenliğini sağlamak için sızma testi hizmeti sunuyorum. Web sitelerinizin güvenlik açıklarını tespit ederek, potansiyel saldırılara karşı önlemler almanızı sağlarım. Sızma testi sürecinde, web uygulamalarınızın güvenlik açıklarını kontrol eder, yetkilendirme, kimlik doğrulama, veri güvenliği gibi konularda önemli testler gerçekleştiririm.
+            </p><p>
+            &nbsp;Python, Javascript ve Java dillerinde de program yazma hizmeti sunuyorum. Bu dillerdeki bilgim ve tecrübem sayesinde, özelleştirilmiş yazılım çözümleri üretebilir, verimli ve kullanışlı programlar geliştirebilirim. Projenizin gereksinimlerine göre, işlevsel ve optimize edilmiş kodlar yazabilirim.
+            </p><p>
+            &nbsp;Benimle iletişime geçmek veya projeleriniz için daha fazla bilgi almak için aşağıdaki linkleri kullanabilirsiniz:
+            </p>
+
+                <div id="colorSquareContainer">
+                <div id="colorSquare1" class="colorSquare" onclick="changeTheme('#000000')" 
+                  onmouseover="highlightSquare(this)" onmouseout="resetSquare(this)"></div>
+                <div id="colorSquare2" class="colorSquare" onclick="changeTheme('#ff0000')" 
+                  onmouseover="highlightSquare(this)" onmouseout="resetSquare(this)"></div>
+                <div id="colorSquare3" class="colorSquare" onclick="changeTheme('#00ff00')" 
+                  onmouseover="highlightSquare(this)" onmouseout="resetSquare(this)"></div>
     </main>
     <footer>
         <a
@@ -33,6 +47,25 @@
         <a href="https://github.com/deuswashere" id="github-logo"></a>
         <a href="mailto:berketoksoz1@gmail.com" id="email-logo"></a>
       </footer>
+
+      <script>
+        // Header ve Footer elementlerini seçelim
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+  
+        // Karelerin tıklanma olayını dinleyelim
+        const colorSquares = document.querySelectorAll('.colorSquare');
+        colorSquares.forEach(square => {
+          square.addEventListener('click', function() {
+          // Seçilen karenin arka plan rengini alalım
+          const color = window.getComputedStyle(this).getPropertyValue('background-color');
+  
+          // Header ve Footer'ın arka plan rengini değiştirelim
+          header.style.backgroundColor = color;
+          footer.style.backgroundColor = color;
+          });
+        });
+      </script>
   
 </body>
 </html>

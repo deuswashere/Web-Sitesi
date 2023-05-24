@@ -21,16 +21,28 @@
       </div>
     </header>
     <main>
-      <p>
-        Adım Berke Toksöz 21 yaşındayım Bandırma Onyedi Eylül Üniversitesinde
-        Bilgisayar Mühendisliği 2.sınıf öğrencisiyim. Java, Python ve Javascript
-        programlama dillerini biliyorum. Ayrıca linux işletim sistemini
-        kullanmayı biliyorum. Bu aralar bilgisayarın genellikle siber güvenlik
-        alanıyla uğraşıyorum. Bilgisayar mühendisliğinde bir çok alan denedim
-        ama en çok hoşuma giden şu ana kadar siber güvenlik oldu. İleride
-        bilgisayar mühendisliğinde siber güvenlik,veri bilimi veya oyun
-        yapımında ilerlemeyi düşünüyorum.
-      </p>
+        <p>
+          &nbsp;Merhaba! Adım Berke Toksöz ve ben Bandırma Onyedi Eylül Üniversitesi'nde Bilgisayar Mühendisliği 2. sınıf öğrencisiyim. Programlama dünyasına olan ilgim ve becerilerim sayesinde Java, Python ve JavaScript gibi popüler programlama dillerini öğrendim. Ayrıca, linux işletim sistemi konusunda da yetenekliyim ve etkin bir şekilde kullanabiliyorum.
+        </p><p>
+          &nbsp;Öğrencilik hayatımda bilgisayar mühendisliği alanında çeşitli dalları denedim, ancak şimdiye kadar en çok siber güvenlik konusu beni etkiledi. Bu alanda gerçekleşen hızlı gelişmeler ve artan siber tehditler, beni daha da ilgiyle çekti. Bilgisayar güvenliği konusunda kendimi sürekli geliştirerek, bu alanda uzmanlaşmak istiyorum.
+        </p><p>
+          &nbsp;Siber güvenlik, bilgi teknolojilerinin hızla ilerlemesiyle birlikte giderek daha fazla önem kazanan bir alan haline gelmiştir. Dijital dünyanın güvenliğini sağlamak, veri sızıntılarını önlemek ve siber saldırılara karşı önlemler almak, günümüzde büyük bir öneme sahiptir. Bu nedenle, siber güvenlik uzmanlarına olan ihtiyaç da her geçen gün artmaktadır.
+        </p><p>
+          &nbsp;Geçtiğimiz zamanlarda siber güvenlik alanında kendimi geliştirmek için çeşitli eğitimler aldım ve siber güvenlik konusunda pratik deneyimler kazandım. Bilgisayar korsanlığına karşı savunma stratejilerini anlamak, ağ güvenliği konusunda bilinçlenmek ve siber saldırılara karşı önlemler almak benim için büyük bir heyecan kaynağı oldu.
+        </p><p>
+          &nbsp;Gelecekte, bilgisayar mühendisliği alanında siber güvenlik, veri bilimi veya oyun yapımı gibi konularda ilerlemeyi düşünüyorum. Veri bilimi, büyük veri analizi yaparak anlamlı bilgiler elde etmeyi ve karar verme süreçlerine katkıda bulunmayı içerirken, oyun yapımı da yaratıcı ve eğlenceli bir şekilde teknik becerilerimi kullanmama olanak sağlayacak.
+        </p><p>
+          &nbsp;Amacım, bu alanlarda uzmanlaşmak için çalışmalarıma devam etmek ve gelişen teknolojilere ayak uydurarak ilerlemektir. Ayrıca, siber güvenlik bilincini artırmak ve insanların dijital dünyada daha güvende olmalarına yardımcı olmak da önceliklerim arasında yer almaktadır.
+        </p>
+
+    <div id="colorSquareContainer">
+    <div id="colorSquare1" class="colorSquare" onclick="changeTheme('#000000')" 
+      onmouseover="highlightSquare(this)" onmouseout="resetSquare(this)"></div>
+    <div id="colorSquare2" class="colorSquare" onclick="changeTheme('#ff0000')" 
+      onmouseover="highlightSquare(this)" onmouseout="resetSquare(this)"></div>
+    <div id="colorSquare3" class="colorSquare" onclick="changeTheme('#00ff00')" 
+      onmouseover="highlightSquare(this)" onmouseout="resetSquare(this)"></div>
+        
     </main>
     <footer>
       <a
@@ -40,5 +52,23 @@
       <a href="https://github.com/deuswashere" id="github-logo"></a>
       <a href="mailto:berketoksoz1@gmail.com" id="email-logo"></a>
     </footer>
+    <script>
+      // Header ve Footer elementlerini seçelim
+      const header = document.querySelector('header');
+      const footer = document.querySelector('footer');
+
+      // Karelerin tıklanma olayını dinleyelim
+      const colorSquares = document.querySelectorAll('.colorSquare');
+      colorSquares.forEach(square => {
+        square.addEventListener('click', function() {
+        // Seçilen karenin arka plan rengini alalım
+        const color = window.getComputedStyle(this).getPropertyValue('background-color');
+
+        // Header ve Footer'ın arka plan rengini değiştirelim
+        header.style.backgroundColor = color;
+        footer.style.backgroundColor = color;
+        });
+      });
+    </script>
   </body>
 </html>
